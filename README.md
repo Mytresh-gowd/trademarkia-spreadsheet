@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Collaborative Spreadsheet
 
-## Getting Started
+This project is a lightweight **real-time collaborative spreadsheet application** built using modern frontend technologies. The application allows multiple users to edit spreadsheet cells simultaneously while viewing updates instantly across all active sessions.
 
-First, run the development server:
+The goal of this project was to simulate a simplified version of Google Sheets while focusing on **real-time synchronization, state management, and collaborative presence indicators**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+* **Spreadsheet Grid Interface**
+
+  * Rows numbered and columns labeled (A, B, C, ...)
+  * Editable cells with dynamic updates
+
+* **Formula Support**
+
+  * Basic arithmetic formulas
+  * Example:
+
+    * `=A1+A2`
+    * `=A1*A2`
+
+* **Real-Time Collaboration**
+
+  * Changes in one browser tab update instantly in all other open sessions.
+
+* **Presence System**
+
+  * Active users viewing the document are displayed in real-time.
+
+* **Write-State Indicator**
+
+  * Displays the saving state of edits:
+  * `Saving...`
+  * `Saved ✓`
+
+* **Document Dashboard**
+
+  * A simple dashboard to open the spreadsheet editor.
+
+---
+
+## Tech Stack
+
+* **Next.js (App Router)**
+* **TypeScript**
+* **Tailwind CSS**
+* **Firebase Firestore (Realtime Database)**
+
+---
+
+## Project Structure
+
+```
+app/
+ ├ page.tsx                 → Document dashboard
+ └ document/
+    └ sheet1/
+       └ page.tsx           → Spreadsheet editor
+
+components/
+ └ SpreadsheetGrid.tsx      → Spreadsheet UI and logic
+
+lib/
+ ├ firebase.ts              → Firebase configuration
+ └ formula.ts               → Formula evaluation logic
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
 
-## Learn More
+```
+git clone https://github.com/YOUR_USERNAME/trademarkia-spreadsheet.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the development server:
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open the app in the browser:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+http://localhost:3000
+```
+
+---
+
+## Live Demo
+
+Live Application:
+(Add your deployed Render or Vercel link here)
+
+---
+
+## Demonstration Video
+
+(Add your demo video link here)
+
+---
+
+## Assignment Context
+
+This project was developed as part of a **Frontend Engineering Assignment**, focusing on:
+
+* Real-time data synchronization
+* Collaborative editing systems
+* Clean frontend architecture
+* Practical use of modern web technologies
