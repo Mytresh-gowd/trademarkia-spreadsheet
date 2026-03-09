@@ -100,13 +100,13 @@ http://localhost:3000
 ## Live Demo
 
 Live Application:
-(Add your deployed Render or Vercel link here)
+https://trademarkia-spreadsheet.onrender.com/
 
 ---
 
 ## Demonstration Video
 
-(Add your demo video link here)
+https://www.loom.com/share/ecf503ed26fe480287e4f8493b86bd99
 
 ---
 
